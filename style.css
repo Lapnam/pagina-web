@@ -646,14 +646,6 @@ object-fit: cover;
     padding-bottom: 2px;
 }
 
-.espacio{
-    height: 50px;
-    background-color: #f4f1e8;
-}
-
-
-
-
 /* Responsive */
 @media (max-width: 900px) {
     .mundo-grid {
@@ -679,4 +671,256 @@ object-fit: cover;
         padding: 50px;
     }
 
+}
+
+/* A partir de aca chicas empieza la barra de navegacion ;) att juan*/
+
+.barra-navegacion {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    border-bottom: 1px solid #e5e2da;
+}
+
+.navegacion-superior {
+    background-color: #f4f1e8;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.navegacion-superior p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.navegacion-contenido {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 18px 40px;
+}
+
+.navegacion-marca {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    letter-spacing: 4px;
+    color: #111;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navegacion-menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion-menu a,
+.navegacion-acciones a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    color: #111;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+}
+
+.navegacion-menu a:hover,
+.navegacion-acciones a:hover {
+    color: rgb(75, 75, 75);
+    border-bottom: 1px solid black;
+}
+
+.navegacion-acciones {
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+}
+
+/* PIE DE PAGINA */
+.pie-pagina {
+    background-color: #f4f1e8;
+    padding: 70px 60px 30px;
+}
+
+.pie-boletin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #ddd8cc;
+}
+
+.pie-boletin h2 {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.pie-boletin p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.boletin-formulario {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    max-width: 520px;
+}
+
+.boletin-campo {
+    flex: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid #111;
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+.boletin-boton {
+    width: 140px;
+    height: 50px;
+    border: none;
+    background-color: #111;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.boletin-boton:hover {
+    background-color: #3a3a3a;
+}
+
+.texto-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.pie-columnas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 60px 0;
+}
+
+.pie-columna h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+}
+
+.pie-columna ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pie-columna li {
+    margin-bottom: 12px;
+}
+
+.pie-columna a,
+.pie-legal a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+}
+
+.pie-columna a:hover,
+.pie-legal a:hover {
+    color: #111;
+    border-bottom: 1px solid #111;
+}
+
+.pie-inferior {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 25px;
+    border-top: 1px solid #ddd8cc;
+}
+
+.pie-inferior p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    color: #333;
+    margin: 0;
+}
+
+.pie-legal {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1100px) {
+
+    .navegacion-contenido {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 18px 20px;
+    }
+
+    .navegacion-menu {
+        order: 3;
+        width: 100%;
+    }
+
+    .navegacion-menu ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .pie-columnas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .pie-pagina {
+        padding: 50px 25px 25px;
+    }
+
+    .pie-columnas {
+        grid-template-columns: 1fr;
+    }
+
+    .boletin-formulario {
+        flex-direction: column;
+    }
+
+    .boletin-boton {
+        width: 100%;
+    }
 }
