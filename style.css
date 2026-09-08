@@ -745,88 +745,159 @@ object-fit: cover;
     gap: 22px;
 }
 
-/* PIE DE PAGINA */
-.pie-pagina {
-    background-color: #f4f1e8;
-    padding: 70px 60px 30px;
+
+/* SERVICIOS DE SWAROVSKI */
+.servicios {
+    background-color: white;
+    padding: 80px 60px;
 }
 
-.pie-boletin {
+.servicios h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.servicio {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-bottom: 60px;
-    border-bottom: 1px solid #ddd8cc;
+    max-width: 520px;
+    margin: 0 auto;
 }
 
-.pie-boletin h2 {
-    font-family: Georgia, serif;
-    font-size: 35px;
-    font-weight: 400;
-    margin-bottom: 15px;
-}
-
-.pie-boletin p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
+.servicio-icono {
+    width: 48px;
+    height: 48px;
     margin-bottom: 30px;
 }
 
-.boletin-formulario {
+.servicio-icono svg {
+    width: 100%;
+    height: 100%;
+}
+
+.servicio h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 18px;
+}
+
+.servicio p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #111;
+    margin: 0;
+}
+
+/* REGISTRO AL CLUB */
+.registro {
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    width: 100%;
-    max-width: 520px;
+    align-items: center;
+    justify-content: center;
+    background-color: #8fb3f0;
+    padding: 60px;
 }
 
-.boletin-campo {
-    flex: 1;
-    min-width: 0;
-    height: 50px;
-    padding: 0 15px;
-    border: 1px solid #111;
-    background-color: white;
+.registro-texto {
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.registro-texto h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.registro-texto p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 760px;
+    margin-bottom: 40px;
 }
 
-.boletin-boton {
-    width: 140px;
-    height: 50px;
-    border: none;
-    background-color: #111;
+.registro-texto p a {
+    color: #111;
+    text-decoration: underline;
+}
+
+.registro-boton {
+    width: 340px;
+    height: 60px;
+    background-color: #000;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 14px;
-    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.boletin-boton:hover {
-    background-color: #3a3a3a;
+.registro-boton:hover {
+    background-color: #333;
+    color: white;
 }
 
-.texto-oculto {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
+.registro-imagen {
+    width: 30%;
+    height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registro-imagen img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* PIE DE PAGINA */
+.pie-pagina {
+    background-color: #000;
+    color: white;
+    padding: 70px 7% 40px;
 }
 
 .pie-columnas {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
-    padding: 60px 0;
+    padding-bottom: 60px;
 }
 
 .pie-columna h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 14px;
+    font-weight: 700;
     letter-spacing: 1px;
-    margin-bottom: 22px;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 30px;
 }
 
 .pie-columna ul {
@@ -836,50 +907,116 @@ object-fit: cover;
 }
 
 .pie-columna li {
-    margin-bottom: 12px;
+    margin-bottom: 18px;
 }
 
 .pie-columna a,
-.pie-legal a {
+.pie-idiomas a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 14px;
-    color: #333;
+    font-size: 15px;
+    color: #d6d6d6;
     text-decoration: none;
-    padding-bottom: 2px;
-    border-bottom: 1px solid transparent;
 }
 
 .pie-columna a:hover,
-.pie-legal a:hover {
-    color: #111;
-    border-bottom: 1px solid #111;
+.pie-idiomas a:hover {
+    color: white;
 }
 
-.pie-inferior {
+.pie-region {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
     gap: 15px;
-    padding-top: 25px;
-    border-top: 1px solid #ddd8cc;
+    padding-top: 35px;
+    border-top: 1px solid #3a3a3a;
 }
 
-.pie-inferior p {
+.pie-globo {
+    width: 22px;
+    height: 22px;
+}
+
+.pie-pais {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 13px;
-    color: #333;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
     margin: 0;
 }
 
-.pie-legal {
+.pie-idiomas {
     display: flex;
     flex-direction: row;
-    gap: 25px;
+    align-items: center;
+    gap: 20px;
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.pie-idiomas li + li {
+    border-left: 1px solid #5a5a5a;
+    padding-left: 20px;
+}
+
+.idioma-activo {
+    color: white;
+    font-weight: 700;
+}
+
+.pie-inferior {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.pie-avisos p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #d6d6d6;
+    margin: 0 0 8px;
+}
+
+.pie-marca {
+    font-family: Georgia, serif;
+    font-size: 55px;
+    letter-spacing: 6px;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.pie-redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pie-redes a {
+    width: 38px;
+    height: 38px;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pie-redes a:hover {
+    background-color: white;
+    color: #000;
 }
 
 @media (max-width: 1100px) {
@@ -901,26 +1038,55 @@ object-fit: cover;
         gap: 18px;
     }
 
+    .registro {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .registro-texto,
+    .registro-imagen {
+        width: 100%;
+    }
+
     .pie-columnas {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .pie-inferior {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .pie-redes {
+        justify-content: center;
+    }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
-    .pie-pagina {
-        padding: 50px 25px 25px;
+    .servicios {
+        padding: 60px 25px;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .registro {
+        padding: 50px 25px;
+    }
+
+    .registro-boton {
+        width: 100%;
     }
 
     .pie-columnas {
         grid-template-columns: 1fr;
     }
 
-    .boletin-formulario {
-        flex-direction: column;
-    }
-
-    .boletin-boton {
-        width: 100%;
+    .pie-marca {
+        font-size: 34px;
     }
 }
